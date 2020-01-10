@@ -1,41 +1,55 @@
-h1 {
-  text-align: center;
-}
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.title {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* margin: 0 auto; Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 5.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 .container {
-  justify-content: center;
-  align-items: center;
   display: flex;
   height: 25%;
-  width: 60%;
-  box-shadow: 0.05px 15px 15px 5px #ccc;
-  border: 0.5px solid #ccc;
-  border-bottom: solid green 15px;
+  flex-direction: row;
 }
 .button {
   text-decoration: none;
-  flex-grow: 0;
-  padding: 33px 25px 0 25px;
   height: 25px;
   width: 25px;
 }
 
 #result {
+  max-width: 350px;
   flex-grow: 4;
-  padding: 30px 15px 25px 15px;
   font-size: 25px;
-  text-align: center;
   margin: 0;
   border: 2px;
 }
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 html * {
-  color: #000 !important;
-  font-family: Arial !important;
+  background-color: black;
+  color: green !important;
+  font-family: monospace !important;
 }
 textarea:focus,
 input:focus {
