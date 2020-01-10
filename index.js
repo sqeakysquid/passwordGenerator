@@ -72,10 +72,13 @@ function getRandomPassphrase(arr, count) {
     document.querySelector("#result").innerHTML = [stored];
   }
 }
-function textCopier() {
-  let copyText = document.getElementById("result");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
+
+function CopyToClipboard(containerid) {
+  var range = document.createRange();
+  range.selectNode(containerid); //changed here
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
   document.execCommand("copy");
-  alert("Copied the text" + copyText.value);
+  window.getSelection().removeAllRanges();
+  alert("Copied data");
 }
