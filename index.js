@@ -80,5 +80,6 @@ function CopyToClipboard(containerid) {
   window.getSelection().addRange(range);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
-  alert("Copied data");
+  document.querySelector("#copied").innerHTML =
+    "Your new password is copied to the clipboard.";
 }
