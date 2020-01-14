@@ -50,6 +50,7 @@ const words = [
   "rain",
   "halt"
 ];
+
 function getRandomPassphrase(arr, count) {
   var shuffled = arr.slice(0),
     i = arr.length,
@@ -80,6 +81,14 @@ function CopyToClipboard(containerid) {
   window.getSelection().addRange(range);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
-  document.querySelector("#copied").innerHTML =
-    "Your new password is copied to the clipboard.";
+  // document.querySelector("#copied").innerHTML =
+  //   "Your new password is copied to the clipboard.";
+}
+
+function showElement() {
+  document.querySelector("#copied").style.visibility = "visible";
+}
+
+function hideElement() {
+  document.querySelector("#copied").style.visibility = "hidden";
 }

@@ -51,6 +51,10 @@ html * {
   color: green !important;
   font-family: monospace !important;
 }
+
+#copied {
+  visibility: hidden;
+}
 textarea:focus,
 input:focus {
   outline: none;
