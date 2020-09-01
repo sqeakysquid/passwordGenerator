@@ -1,59 +1,23 @@
-const words = [
-  "emphasis",
-  "fun",
-  "packet",
-  "lover",
-  "catch",
-  "dead",
-  "tip",
-  "pollution",
-  "bridge",
-  "slump",
-  "feather",
-  "carrot",
-  "constant",
-  "game",
-  "exception",
-  "learn",
-  "testify",
-  "star",
-  "equation",
-  "respect",
-  "tray",
-  "exploration",
-  "lake",
-  "cheque",
-  "restrain",
-  "excess",
-  "deer",
-  "incapable",
-  "accent",
-  "floor",
-  "seek",
-  "slow",
-  "feed",
-  "cane",
-  "host",
-  "rear",
-  "park",
-  "loud",
-  "wood",
-  "draw",
-  "zero",
-  "miss",
-  "heat",
-  "menu",
-  "site",
-  "coma",
-  "flow",
-  "chew",
-  "rain",
-  "halt"
-];
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
 
+fetch("https://random-word-api.herokuapp.com/word?number=100", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .then(function (data) {
+    let words = []
+    for (var i = 0; i < data.results.length; i++) {
+      words.push(data.results[i])
+      console.log(words)
+    }
+  })
+  .catch(error => console.log('error', error));
 let promise = fetch("https://random-word-api.herokuapp.com//word?number=10")
 
-console.log(promise)
+result = words
+
 function getRandomPassphrase(arr, count) {
   var shuffled = arr.slice(0),
     i = arr.length,
