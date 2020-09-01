@@ -1,24 +1,20 @@
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
-
-fetch("https://random-word-api.herokuapp.com/word?number=100", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .then(function (data) {
-    let words = []
-    for (var i = 0; i < data.results.length; i++) {
-      words.push(data.results[i])
-      console.log(words)
-    }
-  })
-  .catch(error => console.log('error', error));
-let promise = fetch("https://random-word-api.herokuapp.com//word?number=10")
-
-result = words
-
+const words = []
 function getRandomPassphrase(arr, count) {
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+
+  fetch("https://random-word-api.herokuapp.com/word?number=100")
+    .then(response => response.json())
+    .then(function (result) {
+      console.log('Result', result)
+      for (var i = 0; i < result.length; i++) {
+        words.push(result[i])
+      }
+      console.log('Words', words)
+    })
+    .catch(error => console.log('error', error));
   var shuffled = arr.slice(0),
     i = arr.length,
     min = i - count,
@@ -35,7 +31,7 @@ function getRandomPassphrase(arr, count) {
     .toString()
     .replace(/,/g, " ");
   if (stored.length < 16) {
-    alert("try again!");
+    // alert("try again!");
   } else {
     document.querySelector("#result").innerHTML = [stored];
   }
