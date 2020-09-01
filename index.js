@@ -51,6 +51,9 @@ const words = [
   "halt"
 ];
 
+let promise = fetch("https://random-word-api.herokuapp.com//word?number=10")
+
+console.log(promise)
 function getRandomPassphrase(arr, count) {
   var shuffled = arr.slice(0),
     i = arr.length,
