@@ -21,7 +21,7 @@ html {
 #main-holder {
   font-size: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3rem;
@@ -30,19 +30,26 @@ html {
   height: 30%;
 }
 
-.container {
-  padding: 10rem;
-}
-
 #result {
-  width: 20rem;
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 4rem;
+  width: 100%;
+  background-color: grey;
+  height: 25%;
 }
 
 #copied {
   display: inline-block;
   padding: 3rem;
 }
+
+.button-container {
+  padding-top: 3rem;
+  flex-direction: column;
+}
+
 .button {
   width: 4rem;
-  padding: 0 3rem;
+  padding: 1rem 3rem;
 }

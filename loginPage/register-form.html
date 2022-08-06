@@ -3,10 +3,12 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="login-page.css">
+    <link rel="stylesheet" href="/loginPage/signup-styles.css">
     <script defer src="register-form.js"></script>
 </head>
 
@@ -14,20 +16,20 @@
     <main id="main-holder">
         <form>
             <div class="container" id="register-form">
-                <h1 id="login-header">Register</h1>
-                <p>Please fill in this form to create your free account.</p>
+                <h1 id="signup-header">Register</h1>
+                <p class="header-sub">Please fill in this form to create your free account.</p>
                 <hr>
 
-                <label for="email"><b>Email</b></label>
+                <label class="form-label" for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-                <label for="username"><b>Username</b></label>
+                <label class="form-label" for="username"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" id="Username" required>
 
-                <label for="psw"><b>Password</b></label>
+                <label class="form-label" for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <label class="form-label" for="psw-repeat"><b>Repeat Password</b></label>
                 <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
                 <hr>
 

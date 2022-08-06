@@ -37,6 +37,8 @@ function getRandomPassphrase(arr, count) {
   }
 }
 
+
+
 function CopyToClipboard(containerid) {
   var range = document.createRange();
   range.selectNode(containerid); //changed here

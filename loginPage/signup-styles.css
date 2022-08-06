@@ -1,0 +1,26 @@
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  padding: 20px;
+  height: 25%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+
+.form-label {
+  align-content: center;
+}
